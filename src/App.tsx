@@ -1,10 +1,12 @@
 import "./styles/App.css";
 import Introduction from "./components/Introduction";
+import Skills from "./components/Skills";
 
 function App() {
   return (
     <>
       <Introduction />
+      <Skills />
     </>
   );
 }

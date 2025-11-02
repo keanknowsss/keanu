@@ -6,7 +6,7 @@ This is my personal site/portfolio, feel free to look around. Don't forget to co
 **Sections to ADD:**
 
 	- [✅] Introduction
-	- [] Skills
+	- [✅] Skills
 	- [] Projects
 	- [] Experience
 	- [] Socials

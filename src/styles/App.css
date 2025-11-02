@@ -125,6 +125,59 @@ header .quote {
 .download-cv-btn:hover {
   @apply bg-secondary text-primary-dark;
 }
+
 .download-cv-btn:hover svg {
   @apply bg-primary-dark text-white;
+}
+
+
+#skills {
+  @apply min-h-screen;
+  padding: 7rem 10rem;
+}
+
+#skills .skills-content {
+  @apply flex flex-col items-center gap-15 h-full;
+}
+
+#skills .description {
+  @apply font-poppins font-semibold uppercase text-center;
+  font-size: 3rem;
+  line-height: 3.2rem;
+  max-width: 46vw;
+}
+
+#skills .skills-list {
+  @apply grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+#skills .skills-list li {
+  @apply rounded-4xl text-center cursor-pointer flex flex-col gap-4;
+  padding: 40px;
+  box-shadow: 0px 0px 10px -5px rgba(81, 81, 81, 1);
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(81, 81, 81, 1);
+  -moz-box-shadow: 0px 0px 10px -5px rgba(81, 81, 81, 1);
+  transition: all 0.2s ease;
+  max-width: 360px;
+  min-height: 250px;
+}
+#skills .skills-list li:hover {
+  @apply bg-secondary text-primary-dark;
+}
+
+.skills-list .icon {
+  @apply m-auto text-6xl;
+}
+
+.skills-list h3 {
+  @apply font-poppins font-semibold;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.skills-list .skill-description {
+  @apply font-inter font-light;
+  line-height: 1.4rem;
+  opacity: 0.9;
 }
