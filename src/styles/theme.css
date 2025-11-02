@@ -1,0 +1,10 @@
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --font-fira: 'Fira Code', monospace;
+  --font-poppins: 'Poppins', sans-serif;
+
+  --color-primary: #1E3A8A;
+  --color-primary-dark: #1c2b4b;
+  --color-primary-darkest: #0F172A;
+  --color-secondary: #F97316;
+}
