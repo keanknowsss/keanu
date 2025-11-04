@@ -3,7 +3,7 @@ const Footer = () => {
     <section id="footer">
       <div className="footer-content">
         <p>Always on the move 🏃🏼‍➡️</p>
-        <p>Copyright &copy; 2024 Keanu</p>
+        <p>Copyright &copy; 2025 Keanu</p>
       </div>
     </section>
   );
