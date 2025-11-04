@@ -235,6 +235,7 @@ header .quote {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
 }
+
 .projects-list .tags li::before {
   @apply rounded-full;
   content: "";
@@ -242,12 +243,15 @@ header .quote {
   width: 14px;
   margin-right: 5px;
 }
+
 .projects-list .tags .fe::before {
   background: #2E026D;
 }
+
 .projects-list .tags .be::before {
   background: #14532D;
 }
+
 .projects-list .tags .db::before {
   background: #7C2D12;
 }
@@ -268,11 +272,13 @@ header .quote {
   @apply flex gap-3 items-center pb-2 pe-4;
   align-self: flex-end;
 }
+
 .projects-list .view-btn-container label {
   @apply font-poppins font-medium text-primary cursor-pointer;
   font-size: 1rem;
   line-height: 1rem;
 }
+
 .projects-list .view-btn-container button {
   @apply bg-white rounded-full cursor-pointer my-1;
   padding: 8px;
@@ -282,9 +288,99 @@ header .quote {
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
 }
+
 .projects-list .view-btn-container button:hover {
   @apply bg-secondary;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
+}
+
+#connect {
+  @apply flex flex-col items-center justify-center gap-4 text-white;
+  background: linear-gradient(180deg, #1E3A8A 0%, #1c2b4b 100%);
+  padding: 5% 5% 10% 5%;
+}
+
+#connect .connect-content {
+  @apply flex flex-col gap-12 w-full items-center;
+}
+
+#connect .description {
+  @apply font-inter font-extrabold text-center uppercase text-secondary;
+  font-size: 4.5em;
+  line-height: 4.5rem;
+}
+
+#connect .subtitle {
+  @apply font-inter font-extralight text-center;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+#connect .links {
+  @apply flex gap-8;
+}
+
+#connect .links li {
+  @apply rounded-full cursor-pointer;
+  padding: 16px;
+  border: 2px solid var(--color-secondary);
+  transition: all 0.1s ease-in-out;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.49);
+}
+
+#connect .links li svg {
+  height: 56px;
+  width: 56px;
+  color: var(--color-secondary);
+  transition: all 0.1s ease-in-out;
+}
+
+#connect .links li:hover {
+  @apply bg-secondary;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.49);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+#connect .links li:hover svg {
+  color: white;
+}
+
+#connect .contacts {
+  @apply w-full m-auto flex justify-evenly gap-4 mt-5;
+  max-width: 50rem;
+}
+
+#connect .contacts p {
+  @apply font-inter font-light text-center items-center flex gap-3;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+#connect .contacts p svg {
+  height: 16px;
+  width: 16px;
+}
+
+#connect .contacts p.icon {
+  padding: 8px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+#footer {
+  @apply bg-primary-darkest p-4 text-sm;
+  color: rgb(157, 157, 157);
+}
+#footer .footer-content {
+  @apply flex items-center justify-between gap-2;
 }

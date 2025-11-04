@@ -2,6 +2,8 @@ import "./styles/App.css";
 import Introduction from "./components/Introduction";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Connect from "./components/Connect";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Introduction />
       <Skills />
       <Projects />
+      <Connect />
+      <Footer />
     </>
   );
 }
