@@ -2,9 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faCloudArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import ContactModal from "./ContactModal";
+import toast from "react-hot-toast";
 
 function Introduction() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isDownloading, setIsDownloading] = useState(false);
 
   const openContactModal = () => {
     setIsContactModalOpen(true);
@@ -12,6 +14,47 @@ function Introduction() {
 
   const closeContactModal = () => {
     setIsContactModalOpen(false);
+  };
+
+  const handleDownloadCV = async () => {
+    if (isDownloading) return;
+
+    setIsDownloading(true);
+
+    // Loading Toast
+    const downloadToast = toast.loading("Downloading CV... Please wait.", {
+      duration: 0,
+    });
+
+    try {
+      await new Promise((resolve) => setTimeout(resolve, 800));
+
+      // Path to CV in public folder
+      const cvUrl = "/public/Keanu_Dwight_CV.pdf";
+      const fileName = "Keanu_Dwight_CV.pdf";
+
+      const link = document.createElement("a");
+      link.href = cvUrl;
+      link.download = fileName;
+      link.target = "_blank";
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast.success("Download successful! Check your downloads folder.", {
+        id: downloadToast,
+        duration: 4000,
+      });
+    } catch (error) {
+      console.error("Download Failed: ", error);
+      toast.error("Download failed. Please try again.", {
+        id: downloadToast,
+        duration: 4000,
+      });
+    } finally {
+      setIsDownloading(false);
+    }
   };
 
   return (
@@ -47,9 +90,16 @@ function Introduction() {
               </button>
             </div>
             <div>
-              <button className="download-cv-btn">
-                <FontAwesomeIcon icon={faCloudArrowDown} />
-                Download CV
+              <button
+                className="download-cv-btn"
+                onClick={handleDownloadCV}
+                disabled={isDownloading}
+              >
+                <FontAwesomeIcon
+                  icon={faCloudArrowDown}
+                  className={isDownloading ? "animate-bounce" : ""}
+                />
+                {isDownloading ? "Preparing..." : "Download CV"}
               </button>
             </div>
           </div>
@@ -60,7 +110,7 @@ function Introduction() {
           </div>
         </div>
       </header>
-    
+
       {/* CONTACT MODAL */}
       <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
     </>

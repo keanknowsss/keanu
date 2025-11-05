@@ -10,16 +10,44 @@ const Connect = () => {
         </div>
         <ul className="links">
           <li>
-            <FaLinkedin />
+            <a
+              href="https://www.linkedin.com/in/keanu-dwight-solomon/"
+              className="cursor-pointer"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaLinkedin />
+            </a>
           </li>
           <li>
-            <FaGithub />
+            <a
+              href="https://github.com/keanknowsss/"
+              className="cursor-pointer"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaGithub />
+            </a>
           </li>
           <li>
-            <FaInstagram />
+            <a
+              href="https://www.instagram.com/keanknows_/"
+              className="cursor-pointer"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaInstagram />
+            </a>
           </li>
           <li>
+            <a
+              href="https://www.strava.com/athletes/70472479"
+              className="cursor-pointer"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
             <FaStrava />
+            </a>
           </li>
         </ul>
         <div className="contacts">
