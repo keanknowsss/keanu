@@ -60,53 +60,60 @@ function Introduction() {
   return (
     <>
       <header>
-        <div className="header-details">
-          <div>
-            <h1 className="name">Keanu Dwight</h1>
-            <ul className="roles">
-              <li>Developer</li>
-              <li>Engineer</li>
-              <li>Cyclist</li>
-              <li>Runner</li>
-            </ul>
-          </div>
-          <div className="flex flex-col gap-10 ms-2">
-            <p className="description">
-              <span>Every project is an adventure—</span>
-              <br />
-              <br />
-              <span>
-                Balancing problem-solving at my desk with long rides on the road. Between cycling
-                routes and new ideas, I love creating things that make life more enjoyable.
-              </span>
-            </p>
-            <p className="quote">I like my coffee, like how I like my IDE, Dark.</p>
-          </div>
-          <div className="flex gap-4 mt-4">
+        <div className="header-content">
+          <div className="header-details">
             <div>
-              <button className="email-btn" onClick={openContactModal}>
-                <FontAwesomeIcon icon={faEnvelope} />
-                Get in Touch
-              </button>
+              <h1 className="name">Keanu Dwight</h1>
+              <ul className="roles">
+                <li>Developer</li>
+                <li>Engineer</li>
+                <li>Cyclist</li>
+                <li>Runner</li>
+              </ul>
             </div>
-            <div>
-              <button
-                className="download-cv-btn"
-                onClick={handleDownloadCV}
-                disabled={isDownloading}
-              >
-                <FontAwesomeIcon
-                  icon={faCloudArrowDown}
-                  className={isDownloading ? "animate-bounce" : ""}
-                />
-                {isDownloading ? "Preparing..." : "Download CV"}
-              </button>
+            <div className="header-picture header-picture-secondary">
+              <div>
+                <img alt="Keanu Dwight Solomon" src="/goat.png" />
+              </div>
+            </div>
+            <div className="flex flex-col gap-10 ms-2 text-content">
+              <p className="description">
+                <span>Every project is an adventure—</span>
+                <br />
+                <br />
+                <span>
+                  Balancing problem-solving at my desk with long rides on the road. Between cycling
+                  routes and new ideas, I love creating things that make life more enjoyable.
+                </span>
+              </p>
+              <p className="quote">I like my coffee, like how I like my IDE, Dark.</p>
+            </div>
+            <div className="flex gap-4 mt-4">
+              <div>
+                <button className="email-btn" onClick={openContactModal}>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  Get in Touch
+                </button>
+              </div>
+              <div>
+                <button
+                  className="download-cv-btn"
+                  onClick={handleDownloadCV}
+                  disabled={isDownloading}
+                >
+                  <FontAwesomeIcon
+                    icon={faCloudArrowDown}
+                    className={isDownloading ? "animate-bounce" : ""}
+                  />
+                  {isDownloading ? "Preparing..." : "Download CV"}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="header-picture">
-          <div>
-            <img src="/goat.png" alt="Keanu Dwight Solomon" />
+          <div className="header-picture header-picture-main">
+            <div>
+              <img src="/goat.png" alt="Keanu Dwight Solomon" />
+            </div>
           </div>
         </div>
       </header>

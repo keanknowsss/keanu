@@ -9,16 +9,20 @@ body {
 }
 
 header {
-  @apply flex justify-around min-h-screen;
+  /* @apply h-screen; */
+  height: min(100vh, 1600px);
   background: radial-gradient(circle at bottom left, #1E3A8A 20%, #0F172A 90%);
   color: white;
-  padding: 10% 5% 5% 5%;
+}
 
+header .header-content {
+  @apply flex justify-around m-auto h-full;
+  padding-block: 10% 5%;
+  max-width: 2300px;
 }
 
 .header-details {
   @apply flex flex-col gap-10 h-full;
-  /* flex: 1; */
 }
 
 .header-picture {
@@ -191,7 +195,8 @@ header .quote {
 }
 
 #projects .projects-content {
-  @apply flex flex-col h-full gap-10;
+  @apply flex flex-col h-full gap-10 m-auto;
+  max-width: 2000px;
 }
 
 #projects .description {
@@ -352,7 +357,7 @@ header .quote {
   -o-transform: scale(1.1);
 }
 
-#connect .links li:hover svg {
+#connect .links li a:hover svg {
   color: white;
 }
 
@@ -414,3 +419,167 @@ header .quote {
 .project-carousel {
   height: 400px;
 }
+
+header .text-content {
+  max-width: 800px;
+}
+
+.header-picture.header-picture-secondary {
+  display: none;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.header-picture.header-picture-main {
+  display: block;
+}
+
+@media (max-width: 1600px) {
+
+  #skills,
+  #projects {
+    padding-inline: 8rem;
+  }
+}
+
+@media (max-width: 1350px) {
+
+  #skills,
+  #projects {
+    padding-inline: 6rem;
+  }
+}
+
+@media (max-width: 1040px) {
+  header {
+    @apply flex-col items-center;
+    gap: 100px;
+  }
+
+  header .name {
+    text-align: center;
+    line-height: 6rem;
+    margin-bottom: 20px;
+  }
+
+  .header-details {
+    align-items: center;
+  }
+
+  header .roles {
+    justify-content: center;
+  }
+
+  .header-picture.header-picture-secondary {
+    display: block;
+
+  }
+
+  .header-picture.header-picture-main {
+    display: none;
+  }
+
+  .text-content {
+    text-align: center;
+    margin: 0;
+    align-items: center;
+  }
+
+  #projects,
+  #skills {
+    max-height: none;
+  }
+
+  #skills .description,
+  #projects .description {
+    max-width: 80%;
+  }
+
+  #skills .skills-list,
+  #projects .projects-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 820px) {
+  header .description {
+    max-width: 65%;
+  }
+
+  #skills,
+  #projects {
+    padding-inline: 3rem;
+  }
+
+  #projects .projects-list {
+
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    padding-bottom: 60px;
+  }
+
+  header .name {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .header-picture div {
+    width: 360px;
+    padding: 10px;
+  }
+
+  header .description {
+    max-width: unset;
+  }
+
+  .email-btn,
+  .download-cv-btn {
+    gap: 6px;
+    padding: 10px 25px 10px 15px;
+    font-size: 16px;
+  }
+
+  #skills,
+  #projects {
+    padding-inline: 1rem;
+  }
+
+  #skills .description,
+  #projects .description {
+    max-width: unset;
+  }
+
+  #skills .skills-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #skills .skills-list li {
+    max-width: unset;
+  }
+
+  #connect .links {
+    gap: 12px;
+  }
+
+  #connect .links li a {
+    padding: 8px;
+  }
+
+  #connect .links li svg {
+    height: 40px;
+    width: 40px;
+  }
+
+  #connect .contacts {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
