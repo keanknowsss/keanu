@@ -3,14 +3,10 @@
 This is my personal site/portfolio, feel free to look around. Don't forget to connect with me at the provided social links. 
 
 
-**Sections to ADD:**
-
-	- [✅] Introduction
-	- [✅] Skills
-	- [] Projects
-	- [] Experience
-	- [] Socials
-	- [] Footer
+Future Features to add: 
+- Animation
+- Work Experience Section
+- New Design (maybe 🤔)
 
 <br>
 <br>
