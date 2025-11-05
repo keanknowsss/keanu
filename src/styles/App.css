@@ -10,14 +10,15 @@ body {
 
 header {
   /* @apply h-screen; */
-  height: min(100vh, 1600px);
+  min-height: min(100vh, 1600px);
   background: radial-gradient(circle at bottom left, #1E3A8A 20%, #0F172A 90%);
   color: white;
 }
 
 header .header-content {
   @apply flex justify-around m-auto h-full;
-  padding-block: 10% 5%;
+  padding: 10% 5%;
+  gap: 1.5rem;
   max-width: 2300px;
 }
 
