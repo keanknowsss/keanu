@@ -30,7 +30,7 @@ function Introduction() {
       await new Promise((resolve) => setTimeout(resolve, 800));
 
       // Path to CV in public folder
-      const cvUrl = "/public/Keanu_Dwight_CV.pdf";
+      const cvUrl = "/Keanu_Dwight_CV.pdf";
       const fileName = "Keanu_Dwight_CV.pdf";
 
       const link = document.createElement("a");
@@ -106,7 +106,7 @@ function Introduction() {
         </div>
         <div className="header-picture">
           <div>
-            <img src="./src/assets/goat.png" alt="Keanu Dwight Solomon" />
+            <img src="/goat.png" alt="Keanu Dwight Solomon" />
           </div>
         </div>
       </header>
