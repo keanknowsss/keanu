@@ -1,5 +1,8 @@
 RewriteEngine On
 
-# Redirect all non-root paths to the root URL
-RewriteCond %{REQUEST_URI} !^/$
+# Only redirect if the requested file or directory does NOT exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirect all other (non-existent) paths to the root
 RewriteRule ^.*$ / [R=301,L]
