@@ -21,7 +21,7 @@ const projects: Projects = [
   {
     id: 1,
     title: "CAREVA - A Journey Guided by Care",
-    status: "ONGOING",
+    status: "DONE",
     shortDescription:
       "A health-focused app built around HIV awareness and care, empowering users to monitor their health, connect with a community, and manage their treatment journey.",
     image: "/careva/cover.png",
@@ -44,6 +44,8 @@ const projects: Projects = [
       "/careva/11.png", 
       "/careva/12.png", 
       "/careva/13.png", 
+      "/careva/14.png", 
+      "/careva/15.png", 
     ],
     fullDescription:
       "CAREVA is a comprehensive health platform designed to promote HIV awareness, safe practices, and treatment adherence. It combines personal health tracking with interactive features like an NFC-based medication system, a guided chatbot, and a supportive community space. CAREVA bridges technology and care to make health management simple, connected, and secure.",
@@ -53,6 +55,8 @@ const projects: Projects = [
       "Personal activity and medication tracking",
       "CAREVA conversational chatbot for health guidance",
       "In-app messaging and community engagement features",
+      "Direct Chat Messaging and Notifications",
+      "In-app Shop"
     ],
   },
   {
